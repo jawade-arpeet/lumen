@@ -28,7 +28,13 @@ interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {}
 
-function Button({ children, className, variant, size, ...props }: ButtonProps) {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  variant,
+  size,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       className={cn(
@@ -43,6 +49,6 @@ function Button({ children, className, variant, size, ...props }: ButtonProps) {
       {children}
     </button>
   );
-}
+};
 
 export default Button;
