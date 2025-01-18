@@ -5,6 +5,7 @@ import AuthLayout from "./layouts/auth.tsx";
 import Home from "./pages/home.tsx";
 import SignIn from "./pages/sign-in.tsx";
 import SignUp from "./pages/sign-up.tsx";
+import ConfirmEmail from "./pages/confirm-email.tsx";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route element={<AuthLayout />}>
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/confirm-email" element={<ConfirmEmail />} />
           </Route>
         </Routes>
       </BrowserRouter>
